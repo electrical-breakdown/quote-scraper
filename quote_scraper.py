@@ -7,13 +7,14 @@ BASE_URL = "http://quotes.toscrape.com/"
 
 print("Welcome to the random quote game!\n") 
     
+#function that scrapes the quotes website and collects all the required info
 def scrape_quotes():
      #find all quote tags on the page and assign them to variable quotes. find_all will return a list
     quotes = []
     page_url = "/page/1"
+    
 
-
-    #as long as there is a next button on the page, get the url for the next page and request the text
+    #as long as there is a url for the next page, get the url for the next page and request the text
     while page_url:
         #request the main page, then request each additional page using the base url plus each page url
         response = requests.get(BASE_URL+page_url)
@@ -37,6 +38,7 @@ def scrape_quotes():
     #return the list of quotes
     return quotes
 
+#main game logic
 def start_game(quotes):
 
     #select a random quote from the list of all quotes
@@ -84,7 +86,7 @@ def start_game(quotes):
         guess = input("Who said this? ")
 
         # if guess is right, game ends and loop breaks out            
-        if guess == author:
+        if guess.lower() == author.lower():
             print("That's correct!")
             break
             
@@ -103,7 +105,7 @@ def start_game(quotes):
     replay_response = input("Would you like to play again (y/n)? ")
 
     #if use enters anything other than y, yes, n, no keep propmpting them
-    while replay_response not in ("n", "no", "y", "yes"):
+    while replay_response.lower() not in ("n", "no", "y", "yes"):
         replay_response = input("\nPlease enter 'y' or 'n'. ")
 
     #if user enters y or yes, call the start_game function again
