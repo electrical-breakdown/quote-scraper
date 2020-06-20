@@ -25,4 +25,4 @@ Making this game was a good way to learn about usng Beatiful Soup for web scrapi
 
 Initially I had the scrape_quotes function grab all the author info and add that to a dictionary, but it took way too long for all of those requests to complete. What I ended up doing was just scraping the quotes themselves, and then only requesting the author info for the quote that was randomly selected. This cuts down on the initial wait time for scraping, but means that the game can't be played offline. 
 
-I did some basic checking before trying to write/access the local cache (file permissions, existence of the directory, etc. ), but I'm sure there was probably a more sophisticated way to handle that. I'll explore that more in future projects. 
+I did some basic checking before trying to write/access the local cache (file permissions, existence of the directory, etc. ), but I'm sure there was probably a more elegeant/comprehensive way to handle that. I'll explore that more in future projects. 
