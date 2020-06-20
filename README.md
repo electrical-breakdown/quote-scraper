@@ -1,5 +1,5 @@
 # quote-scraper
-##A little game I made as part of Colt Steele's Modern Python Bootcamp Class
+#### A little game I made as part of Colt Steele's Modern Python Bootcamp Class
 
 ## Descripion
 
