@@ -7,7 +7,9 @@ A little game I made as part of Colt Steele's Modern Python Bootcamp Class
 ### Main Functions
 The game consists of two main functions: **scrape_quotes** and **start_game**. 
 
-scrape_quotes will request the html from http://quotes.toscrape.com/, extract all the quotes, then add those quotes to a dictionary along with the quote's author and a link to the author's bio page. On first run, quotes will be scraped and then stored locally in a JSON file. On subsequent runs, the scrape_quotes function will check for the existence of the local cache. If quotes have been cached locally, the game will read from the local JSON rather than request and scrape the HTML again. If the local cache hasn't been updated in over 30 days, scraping will take place again and the JSON will be updated with the current quotes. 
+scrape_quotes will request the html from http://quotes.toscrape.com/, extract all the quotes, then add those quotes to a dictionary along with the quote's author and a link to the author's bio page. On first run, quotes will be scraped and then stored locally in a JSON file. On subsequent runs, the scrape_quotes function will check for the existence of the local cache. 
+
+If quotes have been cached locally, the game will read from the local JSON rather than request and scrape the HTML again. If the local cache hasn't been updated in over 30 days, scraping will take place again and the JSON will be updated with the current quotes. 
 
 start_game will take the list of quotes provided by the scrape_quotes function as an argument, choose a random quote to display to the player, check if the player's guess is correct, and offer a hint if the guess is incorrect. 
 
