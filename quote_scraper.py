@@ -38,7 +38,7 @@ def scrape_quotes():
     else:
              
         try:
-            #if not os.path.dirname(local_cache):
+            
             if not os.path.exists(cache_location):
                 os.mkdir(cache_location)
                 cache_write_access = True
@@ -47,16 +47,17 @@ def scrape_quotes():
                 cache_write_access = True
                 
         except PermissionError:
+            
             #print("Local cache could not be created. Game data will be downloaded instead of read locally.\n")
             cache_write_access = False
             pass
            
-    
     #check to see if quotes have been cached locally. If there is no saved quotes file, or if it hasn't been updated in 30 days, scrape the quotes again
     if not os.path.exists(cache_file) or os.stat(cache_file).st_size == 0 or cache_age >= 30:
 
         #as long as there is a url for the next page, get the url for the next page and request the text
         while page_url:
+
             #request the main page, then request each additional page using the base url plus each page url
             response = requests.get(BASE_URL+page_url)
 
