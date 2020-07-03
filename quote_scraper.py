@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 from random import choice
 from datetime import datetime, date
 import json
-import csv
 import os
 
 #main url to which relative urls will be appended
