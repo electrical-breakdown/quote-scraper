@@ -2,7 +2,7 @@
 
 A little game I made as part of Colt Steele's Modern Python Bootcamp Class
 
-## Descripion
+## Description
 
 ### Main Functions
 The game consists of two main functions: **scrape_quotes** and **start_game**. 
